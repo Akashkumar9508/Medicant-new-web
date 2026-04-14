@@ -1,6 +1,5 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-<<<<<<< HEAD
 import { Stethoscope, Sparkles, Microscope, Award, CalendarDays, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -33,23 +32,13 @@ const services = [
     gradient: "from-emerald-500/20 to-teal-500/20",
     color: "text-emerald-500 dark:text-emerald-400"
   },
-=======
 
-const services = [
-  { icon: "🫀", title: "Cardiology", desc: "Advanced cardiac care with state-of-the-art catheterization labs and expert heart surgeons." },
-  { icon: "🧠", title: "Neurology", desc: "Comprehensive neurological diagnostics and treatment for brain and nervous system disorders." },
-  { icon: "🦴", title: "Orthopedics", desc: "Joint replacements, sports medicine, and minimally invasive orthopedic procedures." },
-  { icon: "👶", title: "Pediatrics", desc: "Specialized child healthcare with a nurturing environment for your little ones." },
-  { icon: "🔬", title: "Oncology", desc: "Cutting-edge cancer treatments including immunotherapy, radiation, and precision medicine." },
-  { icon: "🚑", title: "Emergency Care", desc: "24/7 emergency services with rapid response teams and trauma care specialists." },
->>>>>>> 8d3f2ab0783f24e6701044a02bd1a32cb91a94d4
 ];
 
 const Services = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
-<<<<<<< HEAD
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -145,60 +134,7 @@ const Services = () => {
             </motion.div>
           ))}
         </motion.div>
-=======
-  return (
-    <section id="services" className="bg-background" ref={ref}>
-      <div className="px-6 md:px-10 py-20">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="flex items-center gap-3 mb-6"
-        >
-          <span className="w-2 h-2 rounded-full bg-foreground" />
-          <span className="text-sm font-medium text-foreground">Our Services</span>
-        </motion.div>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="heading-display text-3xl md:text-5xl text-foreground mb-4 max-w-3xl"
-        >
-          Specialized care across{" "}
-          <span className="text-gradient">every discipline</span>.
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-muted-foreground text-lg mb-12 max-w-2xl"
-        >
-          From preventive care to complex surgeries, our departments are equipped to handle all your healthcare needs.
-        </motion.p>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {services.map((service, i) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
-              className="group p-6 rounded-2xl border border-border hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 cursor-pointer bg-card"
-            >
-              <span className="text-4xl block mb-4">{service.icon}</span>
-              <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
-              <div className="mt-4 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Learn more →
-              </div>
-            </motion.div>
-          ))}
-        </div>
->>>>>>> 8d3f2ab0783f24e6701044a02bd1a32cb91a94d4
       </div>
     </section>
   );
