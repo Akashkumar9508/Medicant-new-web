@@ -80,10 +80,6 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^15.15.0",
     "jsdom": "^20.0.3",
-<<<<<<< HEAD
-=======
-    "lovable-tagger": "^1.1.13",
->>>>>>> 8d3f2ab0783f24e6701044a02bd1a32cb91a94d4
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3",
